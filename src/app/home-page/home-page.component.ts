@@ -9,11 +9,14 @@ import {
   moveItemInArray,
   transferArrayItem,
 } from '@angular/cdk/drag-drop';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [CommonModule,MatTabsModule,CdkDropListGroup, CdkDropList, CdkDrag],
+  imports: [CommonModule,MatTabsModule,CdkDropListGroup, CdkDropList, CdkDrag,MatButtonModule,MatCardModule,MatIconModule],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
@@ -24,7 +27,11 @@ export class HomePageComponent {
 
   done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
 
-  modules = ['To do', 'In progress' , 'Done']
+  inQA = ['test'];
+
+  readyForQA = ['test'];
+
+  modules = ['To do', 'In progress' ,'Ready for QA','In QA', 'Done'];
 
 
   drop(event: CdkDragDrop<string[]>) {
