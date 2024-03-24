@@ -1,0 +1,53 @@
+<div class="main">
+    <div class="title">
+        <h2>Add Ticket</h2>
+    </div>
+    <div class="main-dialog">
+        <div class="dialog-details">
+            <p class="items">
+                <mat-form-field style="width:400px" appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </p>
+            <p class="items">
+                <mat-form-field style="width:400px;height:200px" appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <textarea style="height:200px" matInput></textarea>
+                </mat-form-field>
+            </p>
+        </div>
+        <div class="dialog-details">
+            <p class="items">
+                <mat-form-field>
+                    <mat-label>Select</mat-label>
+                    <mat-select>
+                        <mat-option value="one">To do</mat-option>
+                        <mat-option value="two">In Progress</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+            <p class="items">
+                <mat-form-field appearance="outline">
+                    <mat-label>Ticket No.</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </p>
+            <p class="items">
+                <mat-form-field appearance="outline">
+                    <mat-label>Due date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </p>
+        </div>
+    </div>
+    <div class="main-dialog">
+        <button mat-raised-button color="primary"><mat-icon>add</mat-icon>
+            Add
+        </button>
+
+    </div>
+</div>

@@ -1,5 +1,5 @@
 .main{
-    padding:100px 100px 50px 50px;
+    padding:20px 50px 50px 50px;
     margin:50px 50px 50px 50px;
     border: solid 3px black;
     border-radius: 20px;
@@ -7,6 +7,12 @@
     box-shadow: 10px 10px 5px lightblue;
     background-color:#363062
 }
+.example-button-row{
+  display:flex;
+  justify-content: end;
+  padding-bottom: 30px;
+}
+
 
 .example {
     max-width: 100%;
